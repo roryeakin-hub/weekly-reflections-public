@@ -1,0 +1,16 @@
+{
+  "name": "weekly-reflections-public",
+  "version": "1.0.0",
+  "description": "A weekly email that asks three deliberately uncomfortable questions, reads the replies, and uses them to write next week's questions.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "for f in lib/*.js api/*.js; do node --check $f || exit 1; done && echo 'syntax ok'",
+    "test": "node test/parse.test.mjs && node test/config.test.mjs && node test/resource-guard.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "googleapis": "^144.0.0"
+  }
+}
